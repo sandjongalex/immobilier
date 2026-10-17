@@ -1,6 +1,6 @@
 # Immobilier — plateforme de location au Cameroun
 
-**Statut : phase 0 — cadrage et architecture uniquement.** Aucun backend, frontend, schéma SQL ni infrastructure n'est encore implémenté.
+**Statut : phase 1 — socle technique initial.** Backend Django et frontend React initialisés, sans fonctionnalités métier ni infrastructure déployée.
 
 ## Vision
 Mettre directement en relation bailleurs et locataires, d'abord à Yaoundé. Le service **ne collecte pas de loyers**, n'organise pas les visites, ne négocie pas, ne rédige ni ne signe les baux et ne garantit pas la qualité juridique des biens. Les utilisateurs gèrent ces démarches eux-mêmes.
@@ -33,5 +33,11 @@ Ces outils ne sont pas supposés installés ou configurés.
 ## Décisions structurantes
 Les montants sont stockés en entier FCFA; les dates sont stockées en UTC et affichées en heure d'Afrique/Douala; une annonce n'est active que si `status=ACTIVE`, `starts_at <= now < ends_at`, `Property` est publiable et l'utilisateur n'est pas bloqué. La création d'une nouvelle période n'efface jamais les périodes ni les paiements précédents.
 
-## Démarrage
-Aucune commande de lancement pour l'instant : cette étape livre **seulement la documentation**. Ne pas inventer de variables d'environnement ou de secrets. La phase suivante sera autorisée explicitement après validation de la [roadmap](docs/ROADMAP.md).
+## Démarrage du socle (sans annonces fonctionnelles)
+- **Pré-requis** : Python 3.13, PostgreSQL 14+, Node.js 22.12+, npm.
+- Backend : voir [backend/README.md](backend/README.md).
+- Frontend : voir [frontend/README.md](frontend/README.md).
+- Guide Windows / Ubuntu, variables et tests : [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
+- Déploiement futur : [deploy/README.md](deploy/README.md).
+
+**Le dépôt ne fournit aucun compte de paiement, aucun secret, aucune base préconfigurée et aucun logement fictif.** Chaque environnement doit être configuré explicitement. La prochaine phase métier ne sera pas développée sans instruction.
