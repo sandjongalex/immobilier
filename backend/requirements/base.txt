@@ -1,0 +1,6 @@
+# API et stockage PostgreSQL uniquement (aucun fallback SQLite).
+Django>=5.2,<5.3
+djangorestframework>=3.16,<3.17
+drf-spectacular>=0.28,<0.30
+psycopg[binary]>=3.2,<3.4
+python-dotenv>=1.1,<2
