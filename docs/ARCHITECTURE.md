@@ -32,7 +32,7 @@ Navigateur (React / Vite / TypeScript / Tailwind)
 
 Préférer **services métier transactionnels** pour transitions et validations; serializers DRF pour transport, permissions pour accès, QuerySets/services pour filtrage public. Ne pas disséminer la logique d'activation dans les signaux Django.
 
-## 3. Structure cible (non créée)
+## 3. Structure initialisée (socle technique de phase 1)
 ```text
 backend/
   manage.py

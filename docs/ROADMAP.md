@@ -1,12 +1,12 @@
 # Roadmap — phases indépendantes et testables
 
-**Phase 0 uniquement livrée ici : documentation et décisions, sans code fonctionnel.** Toute phase suivante exige instruction explicite.
+**Phases 0 et 1 (socle technique) préparées.** Aucun code métier immobilier n'a été développé. Les phases fonctionnelles suivantes exigent instruction explicite.
 
 ## Phase 0 — cadrage et architecture (cette livraison)
 Livrables : `README.md` + six documents `docs/`. Vérifications : cohérence Property/Listing/Payment, statuts, rôle, prix 2 000 XAF, 30 jours, expiration en lecture, plan de déploiement et de tests, risques et décisions ouvertes. Validation humaine avant changement d'étape.
 
-## Phase 1 — socle technique et CI (future)
-Configurer Django/DRF, PostgreSQL, modèle User custom, React/Vite/TS/Tailwind, OpenAPI, variables d'environnement exemple sans secrets, lint/typecheck, pytest et CI. **Tests :** migration sur DB vierge, GET health, génération schéma OpenAPI, compilation frontend, pipeline vert. Aucun encaissement.
+## Phase 1 — socle technique et CI (réalisée, à valider)
+Socle préparé : Django/DRF, PostgreSQL, modèle User personnalisé à email unique, React/Vite/TS/Tailwind, OpenAPI, variables d'environnement exemple sans secrets, Ruff/ESLint/typecheck, pytest/Vitest et GitHub Actions. **Contrôles CI exécutés avec succès :** installation dépendances, cohérence migration, Django check, endpoint health via test, génération OpenAPI, tests et compilation frontend. Tests directs hors CI limités par l'absence locale de dépendances/serveur PostgreSQL. Aucun encaissement. Lockfile npm à générer et committer lorsque les dépendances seront installées sur un poste de développement.
 
 ## Phase 2 — comptes, lieux et logements
 Authentification par session/CSRF, rôles, City/Neighborhood (Yaoundé), Property, photos sécurisées. **Tests :** séparation entre bailleurs, validations ville/quartier, upload rejets, absence d'adresse privée dans JSON public.
